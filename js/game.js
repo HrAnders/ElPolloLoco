@@ -46,7 +46,6 @@
    document.getElementById('startScreen').classList.add('d-none');
    document.getElementById('startbutton').classList.add('d-none');
    document.getElementById('gameSoundOnOff').classList.remove('d-none');
-   throwBtns();
    startButtonPress();
    stopButtonPress();
  }
@@ -317,26 +316,6 @@
     });
   }
   
-  /**
-   * Checks the throw button to throw a bottle.
-   */
-   function throwBtns() {
-    const button = document.getElementById("THROW");
-  
-    const isMobile = window.innerWidth <= 480;
-  
-    if (isMobile) {
-      button.addEventListener("touchstart", () => {
-        keyboard.D = true;
-      });
-  
-      button.addEventListener("touchend", () => {
-        keyboard.D = false;
-      });
-    }
-  }
-  
-  
   
   /**
    * Handles the touch events for mobile devices on press.
@@ -358,7 +337,7 @@
     });
     
     document.getElementById("THROW").addEventListener("touchstart", (ev) => {
-      keyboard.d = true;
+      keyboard.D = true;
       ev.preventDefault();
     });
   }
@@ -383,7 +362,7 @@
     });
     
     document.getElementById("THROW").addEventListener("touchend", (ev) => {
-      keyboard.d = false;
+      keyboard.D = false;
       ev.preventDefault();
     });
   }

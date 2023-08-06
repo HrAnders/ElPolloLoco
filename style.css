@@ -42,7 +42,7 @@ body {
 .buttonsRowBottom {
   position: absolute;
   top: 380px;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
@@ -291,6 +291,8 @@ canvas {
     max-height: 80%;
   }
 
+
+
   .background h1{
     display: none;
   }
@@ -311,6 +313,7 @@ canvas {
   }
 
   .buttonsRowBottom {
+    display: flex;
     top: 197px;
     left: 0;
 }
